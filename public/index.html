@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tailwind</title>
+</head>
+<body class="bg-slate-800" >
+<div class="flex justify-center mt-48 ">
+    <div class="card w-80 h-[450px] bg-[conic-gradient(at_bottom_right,_var(--tw-gradient-stops))] from-green-300 via-blue-500 to-purple-600 rounded-xl border-2-white shadow shadow-grey">
+        <div class=" mt-5 ml-9" id="search">
+            <input type="text" placeholder="   Enter Your City" spellcheck="false" class="rounded-2xl h-8 w-56 shadow-grey">
+            <button class="ml-3" id="btn" onclick="checkWeather(searchBox.value)"><img src="search-interface-symbol.png" class="w-5 h-5 " alt=""></button>
+        </div>
+
+        <div class="hidden">
+            <p>Invalid City Name</p>
+        </div>
+        <div class="ml-24 mt-4 h-[100px] w-[100px]" id="block_start">
+           <img src="./cloudy_weather.png" id="image" alt="">
+        </div>
+        <div>
+            <h1 class="text-white font-bold text-6xl ml-24" id="temperature">22°C</h1>
+            <h2 class="text-white font-bold text-3xl ml-24 mt-2" id="name">Udaipur</h2>
+        </div>
+        <div class="flex ml-2 space-x-4 mt-[40px]">
+            <div class="flex">
+                <img src="./humidity_weather.png" alt="" class="w-16 h-12">
+                    <div>
+                        <h3 class="text-white font-bold text-3xl" id="humidity">49%</h3>
+                        <h4 class="text-white font-bold text-xl italic mt-5 mr-0">Humidity</h4>
+                    </div>
+            </div>
+            <div class="flex space-x-2">
+                <img src="./windspeed_weather.png" alt="" class="w-10 h-10">
+                    <div class="">
+                        <h3 class="text-white font-bold text-3xl" id="wind_speed">49 Km/Hr</h3>
+                        <h4 class="text-white font-bold text-xl italic mt-4">Wind Speed</h4>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
